@@ -500,7 +500,7 @@ namespace ASFui
 
         private string sendCommand(string str) {
             string ret = Util.SendCommand(str);
-            if (!Settings.Default.IsLocal) {
+            if (true){//!Settings.Default.IsLocal) {
                 rtbOutput.AppendText(ret + "\n");
             }
             if (!"api".Equals(str)) { // don't know, why you did not had that here, but just to be sure.
@@ -544,8 +544,6 @@ namespace ASFui
             btnLoot.Enabled = true;
             btnLootAll.Enabled = true;
             btnRedeem.Enabled = true;
-            btnRedeemNF.Enabled = true;
-            btnRedeemFF.Enabled = true;
             btnAddLicense.Enabled = true;
             btnOwns.Enabled = true;
             btnOwnAll.Enabled = true;
@@ -555,15 +553,12 @@ namespace ASFui
             btnStartAll.Enabled = true;
             btnStopBot.Enabled = true;
             btnPauseBot.Enabled = true;
-            btnPauseBotPerma.Enabled = true;
             btnResumeBot.Enabled = true;
             btnPasswordBot.Enabled = true;
             btnStatusBot.Enabled = true;
             btnStatusAll.Enabled = true;
             btnASFHelp.Enabled = true;
-            btnASFUpdate.Enabled = true;
             btnASFVersion.Enabled = true;
-            btnAPI.Enabled = true;
             btn2FA.Enabled = true;
             btn2FAOk.Enabled = true;
             btn2FANo.Enabled = true;
@@ -577,8 +572,6 @@ namespace ASFui
             btnLoot.Enabled = false;
             btnLootAll.Enabled = false;
             btnRedeem.Enabled = false;
-            btnRedeemNF.Enabled = false;
-            btnRedeemFF.Enabled = false;
             btnAddLicense.Enabled = false;
             btnOwns.Enabled = false;
             btnOwnAll.Enabled = false;
@@ -588,15 +581,12 @@ namespace ASFui
             btnStartAll.Enabled = false;
             btnStopBot.Enabled = false;
             btnPauseBot.Enabled = false;
-            btnPauseBotPerma.Enabled = false;
             btnResumeBot.Enabled = false;
             btnPasswordBot.Enabled = false;
             btnStatusBot.Enabled = false;
             btnStatusAll.Enabled = false;
             btnASFHelp.Enabled = false;
-            btnASFUpdate.Enabled = false;
             btnASFVersion.Enabled = false;
-            btnAPI.Enabled = false;
             btn2FA.Enabled = false;
             btn2FAOk.Enabled = false;
             btn2FANo.Enabled = false;

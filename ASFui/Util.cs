@@ -22,15 +22,15 @@ namespace ASFui
 
         public static string SendCommand(string command)
         {
-			string adress;
-			if ((adress = GetEndpointAddress()).StartsWith("net")){
-				using (var asfClient = new Client(Binding, new EndpointAddress(adress))) {
-					return asfClient.HandleCommand(command);
-				}
-			}
-
+			string adress = GetEndpointAddress();
 			using (WebClient webclient = new WebClient()) {
-				return webclient.DownloadString(adress +"?command="+command);
+				if(!adress.Contains("#"))
+					return webclient.DownloadString(adress + System.Net.WebUtility.UrlEncode(command));
+				else {
+					var regex = new System.Text.RegularExpressions.Regex(System.Text.RegularExpressions.Regex.Escape("#"));
+					return webclient.DownloadString(regex.Replace(adress, System.Net.WebUtility.UrlEncode(command), 1));
+				}
+					
 			}
 		}
 
@@ -42,7 +42,7 @@ namespace ASFui
         public static string MultiToOne(string[] text)
         {
             string command = null;
-            text = text.Where(x => !string.IsNullOrEmpty(x) && !string.IsNullOrWhiteSpace(x)).ToArray();
+            text = text.Where(x => !string.IsNullOrEmpty(x) && !Environment.NewLine.Equals(x)).ToArray();
             command += string.Join(",", text);
 
             return command;
@@ -58,21 +58,14 @@ namespace ASFui
 			var hostname = "127.0.0.1";
 			var port = "1242";
 			//newversion:
-			if (null==json["WCFHost"] && json["WCFPort"]==null && json["WCFHostname"] == null) {
-				if (null != json["IPCHostname"])
-					hostname = json["IPCHostname"].ToString();
-				if (null != json["IPCPort"])
-					port = json["IPCPort"].ToString();
-				return "http://" + hostname + ":" + port + "/IPC";
-			}
-			if (null != json["WCFHost"])
-				hostname = json["WCFHost"].ToString();
-			if (null != json["WCFHostname"])
-				hostname = json["WCFHostname"].ToString();
-			if (null != json["WCFPort"])
-				port = json["WCFPort"].ToString();
-
-            return "net.tcp://" + hostname + ":" + port + "/ASF";
+			if (null != json["IPCHostname"])
+				hostname = json["IPCHostname"].ToString();
+			if (null != json["IPCPort"])
+				port = json["IPCPort"].ToString();
+			if (null == json["IPCPassword"] || string.IsNullOrEmpty(json["IPCPassword"].ToString()))
+				return "http://" + hostname + ":" + port + "/Api/Command/";
+			else
+				return "http://" + hostname + ":" + port + "/Api/Command/#?password=" + json["IPCPassword"].ToString();
         }
 
         public static bool CheckIfAsfIsRunning()
@@ -84,21 +77,7 @@ namespace ASFui
 
         public static void CheckVersion()
         {
-            string currentVersion;
-            using (var web = new WebClient())
-            {
-                currentVersion =
-                    web.DownloadString("https://raw.githubusercontent.com/alvr/ASFui/master/version.txt");
-            }
-
-            if (new Version(Application.ProductVersion).CompareTo(new Version(currentVersion)) >= 0) return;
-            var option = MessageBox.Show(@"A new version (" + currentVersion + @") is available, download now?",
-                @"New version", MessageBoxButtons.YesNo,
-                MessageBoxIcon.Information);
-            if (option == DialogResult.Yes)
-            {
-                Process.Start("https://github.com/alvr/ASFui/releases/latest");
-            }
+            
         }
 		
 		public static void UpgradeSettings()
@@ -122,20 +101,7 @@ namespace ASFui
         public static bool CheckUrl(string url)
         {
 
-            return url.ToLower().StartsWith("net.tcp://");
-            /* Do an advanced check here if the URL fits or something is currently listening.
-            try
-            {
-                var client = new MetadataExchangeClient(Binding);
-                client.GetMetadata();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Logging.Exception(ex, "Invalid remote URL.");
-                return false;
-            }
-            */
+            return true;
         }
     }
 }

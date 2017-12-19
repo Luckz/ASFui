@@ -103,7 +103,7 @@ namespace ASFui
                     (("OnCooldown".Equals(type) || "RateLimited".Equals(type)) && Properties.Settings.Default.ClearCooldown)) {
                     _asf.tbInput.Invoke(new MethodInvoker(() => {
                         _asf.tbInput.Text = Regex.Replace(_asf.tbInput.Text.Replace(key, ""), @"\s+", Environment.NewLine);
-                        if (_asf.tbInput.Text.Length < 2) // remove the last newline, if we removed all keys.
+                        if (_asf.tbInput.Text.Length < 5) // remove the last newline, if we removed all keys.
                             _asf.tbInput.Text = "";
                     }));
                 }
