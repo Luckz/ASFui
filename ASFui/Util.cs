@@ -1,6 +1,7 @@
 ﻿using System;
 using ASFui.Properties;
 using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
@@ -22,16 +23,20 @@ namespace ASFui
 
         public static string SendCommand(string command)
         {
+
 			string adress = GetEndpointAddress();
+			string msg="";
 			using (WebClient webclient = new WebClient()) {
 				if(!adress.Contains("#"))
-					return webclient.DownloadString(adress + System.Net.WebUtility.UrlEncode(command));
+					msg= webclient.DownloadString(adress + System.Net.WebUtility.UrlEncode(command));
 				else {
 					var regex = new System.Text.RegularExpressions.Regex(System.Text.RegularExpressions.Regex.Escape("#"));
-					return webclient.DownloadString(regex.Replace(adress, System.Net.WebUtility.UrlEncode(command), 1));
-				}
-					
+					msg= webclient.DownloadString(regex.Replace(adress, System.Net.WebUtility.UrlEncode(command), 1));
+				}	
 			}
+			dynamic tmp= JsonConvert.DeserializeObject(msg);
+			return tmp.Result;
+
 		}
 
         public static string GenerateCommand(string command, string user, string args = "")
