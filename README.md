@@ -1,1 +1,1 @@
-# [visitor, just click here](/tree/alt)
+# [visitor, just click here](../../tree/alt)
