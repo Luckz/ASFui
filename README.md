@@ -1,5 +1,5 @@
 [![Build status](https://img.shields.io/appveyor/ci/luckz/ASFui.svg?label=Build)](https://ci.appveyor.com/project/luckz/asfui)
-[![GitHub Release](https://img.shields.io/github/release/KlappPC/ASFui.svg?label=Latest Stable)](https://github.com/KlappPC/ASFui/releases/latest)
+[![GitHub Release](https://img.shields.io/github/release/KlappPC/ASFui/all.svg)](https://github.com/KlappPC/ASFui/releases/latest)
 [![Beta Release](https://img.shields.io/badge/Latest%20Beta-Download-blue.svg)](https://ci.appveyor.com/project/luckz/asfui/build/artifacts)
 
 ---
