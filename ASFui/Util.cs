@@ -24,14 +24,14 @@ namespace ASFui
         public static string SendCommand(string command)
         {
 
-			string adress = GetEndpointAddress();
+			string address = GetEndpointAddress();
 			string msg="";
 			using (WebClient webclient = new WebClient()) {
-				if(!adress.Contains("#"))
-					msg= webclient.DownloadString(adress + System.Net.WebUtility.UrlEncode(command));
+				if(!address.Contains("#"))
+					msg= webclient.DownloadString(address + System.Net.WebUtility.UrlEncode(command));
 				else {
 					var regex = new System.Text.RegularExpressions.Regex(System.Text.RegularExpressions.Regex.Escape("#"));
-					msg= webclient.DownloadString(regex.Replace(adress, System.Net.WebUtility.UrlEncode(command), 1));
+					msg= webclient.DownloadString(regex.Replace(address, System.Net.WebUtility.UrlEncode(command), 1));
 				}	
 			}
 			dynamic tmp= JsonConvert.DeserializeObject(msg);
