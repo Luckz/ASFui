@@ -28,10 +28,10 @@ namespace ASFui
 			string msg="";
 			using (WebClient webclient = new WebClient()) {
 				if(!address.Contains("#"))
-					msg= webclient.DownloadString(address + System.Net.WebUtility.UrlEncode(command));
+					msg= webclient.UploadString(address + System.Net.WebUtility.UrlEncode(command), String.Empty);
 				else {
 					var regex = new System.Text.RegularExpressions.Regex(System.Text.RegularExpressions.Regex.Escape("#"));
-					msg= webclient.DownloadString(regex.Replace(address, System.Net.WebUtility.UrlEncode(command), 1));
+					msg= webclient.UploadString(regex.Replace(address, System.Net.WebUtility.UrlEncode(command), 1), String.Empty);
 				}	
 			}
 			dynamic tmp= JsonConvert.DeserializeObject(msg);
