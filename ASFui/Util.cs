@@ -78,9 +78,18 @@ namespace ASFui
 
         public static bool CheckIfAsfIsRunning()
         {
-            return Process.GetProcessesByName("ASF").Length > 0 ||
+            foreach (Process PPath in Process.GetProcessesByName("ArchiSteamFarm"))
+            {
+                string fullpath = PPath.MainModule.FileName;
+                if (fullpath == Settings.Default.ASFBinary) //only match exact ASF
+                    return true;
+            }
+            return false;
+
+            //old code matching any ASFs:
+            /*return Process.GetProcessesByName("ASF").Length > 0 ||
                    Process.GetProcessesByName("ArchiSteamFarm").Length > 0 ||
-                   Process.GetProcessesByName(Path.GetFileNameWithoutExtension(Settings.Default.ASFBinary)).Length > 0;
+                   Process.GetProcessesByName(Path.GetFileNameWithoutExtension(Settings.Default.ASFBinary)).Length > 0;*/
         }
 
         public static void CheckVersion()
