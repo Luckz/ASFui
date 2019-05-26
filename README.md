@@ -22,7 +22,8 @@ If you have a GitHub account, you can [fork it](https://github.com/alvr/ASFui/),
 If you don't, you can comment in the [SteamGifts thread](https://www.steamgifts.com/discussion/eT97I/).
 
 ## Download
-The beta version is compiled after each commit.
+See [Releases](https://github.com/Luckz/ASFui/releases).
+The beta version is compiled after each commit. AppVeyor retains these for 6 months.
 
 ## Changelog
 [Guess based on commits](../../commits/alt/)
