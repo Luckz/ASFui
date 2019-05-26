@@ -30,7 +30,7 @@ namespace ASFui
 
         private void init() {
 			var ASFInfo = new ProcessStartInfo() {
-				Arguments = "--server",
+				Arguments = "--process-required",
 				CreateNoWindow = true,
 				Domain = "",
 				FileName = Properties.Settings.Default.ASFBinary,
@@ -45,7 +45,7 @@ namespace ASFui
 				WindowStyle = ProcessWindowStyle.Hidden
 			};
 			if (Properties.Settings.Default.ASFBinary.EndsWith("dll")) {
-				ASFInfo.Arguments = Properties.Settings.Default.ASFBinary + " --server";
+				ASFInfo.Arguments = Properties.Settings.Default.ASFBinary + " --process-required";
 				ASFInfo.FileName = "dotnet";
 			}
 
