@@ -253,3 +253,5 @@ paket-files/
 *.sln.iml
 
 out/
+
+ASFui/FodyWeavers.xsd
