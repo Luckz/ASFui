@@ -27,11 +27,14 @@ namespace ASFui
 			string address = GetEndpointAddress();
 			string msg="";
 			using (WebClient webclient = new WebClient()) {
-				if(!address.Contains("#"))
-					msg= webclient.UploadString(address + System.Net.WebUtility.UrlEncode(command), String.Empty);
+                webclient.Encoding = System.Text.Encoding.UTF8;
+                webclient.Headers[HttpRequestHeader.ContentType] = "application/json";
+
+                if (!address.Contains("#"))
+					msg= webclient.UploadString(address + Uri.EscapeUriString(command), String.Empty);
 				else {
 					var regex = new System.Text.RegularExpressions.Regex(System.Text.RegularExpressions.Regex.Escape("#"));
-					msg= webclient.UploadString(regex.Replace(address, System.Net.WebUtility.UrlEncode(command), 1), String.Empty);
+					msg= webclient.UploadString(regex.Replace(address, Uri.EscapeUriString(command), 1), String.Empty);
 				}	
 			}
 			dynamic tmp= JsonConvert.DeserializeObject(msg);

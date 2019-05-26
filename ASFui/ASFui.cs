@@ -501,7 +501,9 @@ namespace ASFui
         private string sendCommand(string str) {
             string ret = Util.SendCommand(str);
             if (true){//!Settings.Default.IsLocal) {
-                rtbOutput.AppendText(ret + "\n");
+                rtbOutput.Invoke(new MethodInvoker(() => {//also needed to avoid errors in debug mode
+                    rtbOutput.AppendText(ret + "\n");
+                }));
             }
             if (!"api".Equals(str)) { // don't know, why you did not had that here, but just to be sure.
                 rtbOutput.Invoke(new MethodInvoker(() => {// In debug mode I get errors here, if I do not use invoke...
