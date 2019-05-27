@@ -108,7 +108,7 @@
 			this.rtbOutput.BackColor = System.Drawing.SystemColors.InactiveCaption;
 			this.rtbOutput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.rtbOutput.Enabled = false;
-			this.rtbOutput.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.rtbOutput.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(1))); //why was this set to ANSI?
 			this.rtbOutput.ForeColor = System.Drawing.Color.Black;
 			this.rtbOutput.Location = new System.Drawing.Point(20, 557);
 			this.rtbOutput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
