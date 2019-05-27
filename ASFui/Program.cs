@@ -7,9 +7,9 @@ namespace ASFui {
 		private static void Main() {
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			var asf = new ASFui();
-			asf.Text += @" - v" + Application.ProductVersion;
-			Application.Run(asf);
+			var asfUI = new ASFui();
+			asfUI.Text += @" - v" + Application.ProductVersion;
+			Application.Run(asfUI);
 		}
 	}
 }
