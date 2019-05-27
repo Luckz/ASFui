@@ -1,33 +1,28 @@
-﻿namespace ASFui
-{
-    partial class ASFui
-    {
-        /// <summary>
-        /// Variable del diseñador necesaria.
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
+namespace ASFui {
+	partial class ASFui {
+		/// <summary>
+		/// Variable del diseñador necesaria.
+		/// </summary>
+		private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Limpiar los recursos que se estén usando.
-        /// </summary>
-        /// <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+		/// <summary>
+		/// Limpiar los recursos que se estén usando.
+		/// </summary>
+		/// <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
+		protected override void Dispose(bool disposing) {
+			if (disposing && (components != null)) {
+				components.Dispose();
+			}
+			base.Dispose(disposing);
+		}
 
-        #region Código generado por el Diseñador de Windows Forms
+		#region Código generado por el Diseñador de Windows Forms
 
-        /// <summary>
-        /// Método necesario para admitir el Diseñador. No se puede modificar
-        /// el contenido de este método con el editor de código.
-        /// </summary>
-        private void InitializeComponent()
-        {
+		/// <summary>
+		/// Método necesario para admitir el Diseñador. No se puede modificar
+		/// el contenido de este método con el editor de código.
+		/// </summary>
+		private void InitializeComponent() {
 			this.components = new System.ComponentModel.Container();
 			this.rtbOutput = new System.Windows.Forms.RichTextBox();
 			this.btnStop = new System.Windows.Forms.Button();
@@ -102,13 +97,13 @@
 			// 
 			// rtbOutput
 			// 
-			this.rtbOutput.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+			this.rtbOutput.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+			| System.Windows.Forms.AnchorStyles.Left)
+			| System.Windows.Forms.AnchorStyles.Right)));
 			this.rtbOutput.BackColor = System.Drawing.SystemColors.InactiveCaption;
 			this.rtbOutput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.rtbOutput.Enabled = false;
-			this.rtbOutput.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(1))); //why was this set to ANSI?
+			this.rtbOutput.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (1))); //why was this set to ANSI?
 			this.rtbOutput.ForeColor = System.Drawing.Color.Black;
 			this.rtbOutput.Location = new System.Drawing.Point(20, 557);
 			this.rtbOutput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -121,9 +116,9 @@
 			// 
 			// btnStop
 			// 
-			this.btnStop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnStop.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.btnStop.Enabled = false;
-			this.btnStop.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnStop.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
 			this.btnStop.Location = new System.Drawing.Point(879, 740);
 			this.btnStop.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.btnStop.Name = "btnStop";
@@ -136,8 +131,8 @@
 			// 
 			// btnStart
 			// 
-			this.btnStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnStart.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
 			this.btnStart.Location = new System.Drawing.Point(758, 740);
 			this.btnStart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.btnStart.Name = "btnStart";
@@ -150,7 +145,7 @@
 			// 
 			// btnClear
 			// 
-			this.btnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnClear.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.btnClear.Enabled = false;
 			this.btnClear.Location = new System.Drawing.Point(1000, 740);
 			this.btnClear.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -164,7 +159,7 @@
 			// 
 			// cbBotList
 			// 
-			this.cbBotList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.cbBotList.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.cbBotList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cbBotList.Enabled = false;
 			this.cbBotList.FormattingEnabled = true;
@@ -177,7 +172,7 @@
 			// 
 			// lbCurrentBot
 			// 
-			this.lbCurrentBot.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.lbCurrentBot.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.lbCurrentBot.AutoSize = true;
 			this.lbCurrentBot.Location = new System.Drawing.Point(18, 748);
 			this.lbCurrentBot.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -188,7 +183,7 @@
 			// 
 			// btnReloadBots
 			// 
-			this.btnReloadBots.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.btnReloadBots.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.btnReloadBots.BackgroundImage = global::ASFui.Properties.Resources.refresh;
 			this.btnReloadBots.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.btnReloadBots.Enabled = false;
@@ -263,8 +258,8 @@
 			// 
 			// gb2FA
 			// 
-			this.gb2FA.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+			this.gb2FA.Anchor = ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+			| System.Windows.Forms.AnchorStyles.Right)));
 			this.gb2FA.Controls.Add(this.tlp2FA);
 			this.gb2FA.Location = new System.Drawing.Point(20, 458);
 			this.gb2FA.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -393,7 +388,7 @@
 			this.btnLoot.TabIndex = 1;
 			this.btnLoot.Text = "Loot";
 			this.ttDesc.SetToolTip(this.btnLoot, "Sends all booster packs and Steam trading cards\r\n(including foils if IsBotAccount" +
-        ") of given\r\nbot instance to SteamMasterID.");
+		") of given\r\nbot instance to SteamMasterID.");
 			this.btnLoot.UseVisualStyleBackColor = true;
 			this.btnLoot.Click += new System.EventHandler(this.btnLoot_Click);
 			// 
@@ -413,8 +408,8 @@
 			// 
 			// gbBots
 			// 
-			this.gbBots.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+			this.gbBots.Anchor = ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+			| System.Windows.Forms.AnchorStyles.Right)));
 			this.gbBots.Controls.Add(this.tlpBots);
 			this.gbBots.Location = new System.Drawing.Point(396, 215);
 			this.gbBots.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -600,7 +595,7 @@
 			// tbInput
 			// 
 			this.tbInput.Enabled = false;
-			this.tbInput.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.tbInput.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
 			this.tbInput.Location = new System.Drawing.Point(9, 29);
 			this.tbInput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.tbInput.Multiline = true;
@@ -610,8 +605,8 @@
 			// 
 			// gbChat
 			// 
-			this.gbChat.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+			this.gbChat.Anchor = ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+			| System.Windows.Forms.AnchorStyles.Right)));
 			this.gbChat.Controls.Add(this.tlpChat);
 			this.gbChat.Location = new System.Drawing.Point(541, 99);
 			this.gbChat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -693,7 +688,7 @@
 			this.btnOwns.TabIndex = 0;
 			this.btnOwns.Text = "Own";
 			this.ttDesc.SetToolTip(this.btnOwns, "Checks if given bot instance already owns given appIDs\r\nand/or gameNames (can be " +
-        "part of the game\'s name).");
+		"part of the game\'s name).");
 			this.btnOwns.UseVisualStyleBackColor = true;
 			this.btnOwns.Click += new System.EventHandler(this.btnOwns_Click);
 			// 
@@ -708,7 +703,7 @@
 			this.btnPlay.TabIndex = 2;
 			this.btnPlay.Text = "Play";
 			this.ttDesc.SetToolTip(this.btnPlay, "Switches to manual farming - launches given\r\nappIDs on given bot instance. Use !r" +
-        "esume\r\nfor returning to automatic farming.");
+		"esume\r\nfor returning to automatic farming.");
 			this.btnPlay.UseVisualStyleBackColor = true;
 			this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
 			// 
@@ -723,14 +718,14 @@
 			this.btnOwnAll.TabIndex = 1;
 			this.btnOwnAll.Text = "Own All";
 			this.ttDesc.SetToolTip(this.btnOwnAll, "Checks all currently enabled ASF bots for owning given\r\nappIDs and/or gameNames (" +
-        "can be part of the game\'s name).");
+		"can be part of the game\'s name).");
 			this.btnOwnAll.UseVisualStyleBackColor = true;
 			this.btnOwnAll.Click += new System.EventHandler(this.btnOwnAll_Click);
 			// 
 			// gbASF
 			// 
-			this.gbASF.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+			this.gbASF.Anchor = ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+			| System.Windows.Forms.AnchorStyles.Right)));
 			this.gbASF.Controls.Add(this.tlpASF);
 			this.gbASF.Location = new System.Drawing.Point(396, 360);
 			this.gbASF.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -798,7 +793,7 @@
 			// 
 			this.cmsTrayIcon.ImageScalingSize = new System.Drawing.Size(24, 24);
 			this.cmsTrayIcon.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiClose});
+			this.tsmiClose});
 			this.cmsTrayIcon.Name = "cmsTrayIcon";
 			this.cmsTrayIcon.Size = new System.Drawing.Size(128, 34);
 			// 
@@ -811,7 +806,7 @@
 			// 
 			// btnASFuiSettings
 			// 
-			this.btnASFuiSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnASFuiSettings.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.btnASFuiSettings.BackgroundImage = global::ASFui.Properties.Resources.settings;
 			this.btnASFuiSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.btnASFuiSettings.Location = new System.Drawing.Point(714, 740);
@@ -825,7 +820,7 @@
 			// 
 			// btnASFuiHelp
 			// 
-			this.btnASFuiHelp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnASFuiHelp.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.btnASFuiHelp.BackgroundImage = global::ASFui.Properties.Resources.help;
 			this.btnASFuiHelp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.btnASFuiHelp.Location = new System.Drawing.Point(670, 740);
@@ -839,8 +834,8 @@
 			// 
 			// tlpMainContent
 			// 
-			this.tlpMainContent.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+			this.tlpMainContent.Anchor = ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+			| System.Windows.Forms.AnchorStyles.Right)));
 			this.tlpMainContent.ColumnCount = 4;
 			this.tlpMainContent.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
 			this.tlpMainContent.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -910,61 +905,60 @@
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
-        }
+		}
 
-        #endregion
-        private System.Windows.Forms.Label lbCurrentBot;
-        private System.Windows.Forms.Button btnReloadBots;
-        private System.Windows.Forms.GroupBox gbKeys;
-        private System.Windows.Forms.GroupBox gb2FA;
-        private System.Windows.Forms.GroupBox gbCards;
-        private System.Windows.Forms.TableLayoutPanel tlpCards;
-        private System.Windows.Forms.Button btnFarm;
-        private System.Windows.Forms.Button btnLoot;
-        private System.Windows.Forms.GroupBox gbBots;
-        private System.Windows.Forms.TableLayoutPanel tlpBots;
-        private System.Windows.Forms.Button btnStartBot;
-        private System.Windows.Forms.Button btnStopBot;
-        private System.Windows.Forms.GroupBox gbInput;
-        private System.Windows.Forms.TableLayoutPanel tlp2FA;
-        private System.Windows.Forms.Button btn2FA;
-        private System.Windows.Forms.Button btn2FAOk;
-        private System.Windows.Forms.Button btn2FANo;
-        private System.Windows.Forms.GroupBox gbChat;
-        private System.Windows.Forms.TableLayoutPanel tlpChat;
-        private System.Windows.Forms.Button btnRejoin;
-        private System.Windows.Forms.GroupBox gbGames;
-        private System.Windows.Forms.TableLayoutPanel tlpGames;
-        private System.Windows.Forms.Button btnOwns;
-        private System.Windows.Forms.GroupBox gbASF;
-        private System.Windows.Forms.TableLayoutPanel tlpASF;
-        private System.Windows.Forms.Button btnASFHelp;
-        private System.Windows.Forms.Button btnASFVersion;
-        private System.Windows.Forms.NotifyIcon TrayIcon;
-        private System.Windows.Forms.ContextMenuStrip cmsTrayIcon;
-        private System.Windows.Forms.ToolStripMenuItem tsmiClose;
-        private System.Windows.Forms.Button btnASFuiSettings;
-        private System.Windows.Forms.RichTextBox rtbOutput;
-        private System.Windows.Forms.ComboBox cbBotList;
-        private System.Windows.Forms.Button btnLootAll;
-        private System.Windows.Forms.Button btnPasswordBot;
-        private System.Windows.Forms.Button btnASFuiHelp;
-        private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.TableLayoutPanel tlpMainContent;
-        private System.Windows.Forms.Button btnPlay;
-        private System.Windows.Forms.Button btnOwnAll;
-        public System.Windows.Forms.TextBox tbInput;
-        public System.Windows.Forms.Button btnStart;
-        public System.Windows.Forms.Button btnStop;
-        private System.Windows.Forms.ToolTip ttDesc;
-        private System.Windows.Forms.Button btnPauseBot;
-        private System.Windows.Forms.Button btnStatusAll;
-        private System.Windows.Forms.Button btnStatusBot;
-        private System.Windows.Forms.Button btnResumeBot;
-        private System.Windows.Forms.Button btnStartAll;
-        private System.Windows.Forms.TableLayoutPanel tlpKeys;
-        private System.Windows.Forms.Button btnRedeem;
-        private System.Windows.Forms.Button btnAddLicense;
-    }
+		#endregion
+		private System.Windows.Forms.Label lbCurrentBot;
+		private System.Windows.Forms.Button btnReloadBots;
+		private System.Windows.Forms.GroupBox gbKeys;
+		private System.Windows.Forms.GroupBox gb2FA;
+		private System.Windows.Forms.GroupBox gbCards;
+		private System.Windows.Forms.TableLayoutPanel tlpCards;
+		private System.Windows.Forms.Button btnFarm;
+		private System.Windows.Forms.Button btnLoot;
+		private System.Windows.Forms.GroupBox gbBots;
+		private System.Windows.Forms.TableLayoutPanel tlpBots;
+		private System.Windows.Forms.Button btnStartBot;
+		private System.Windows.Forms.Button btnStopBot;
+		private System.Windows.Forms.GroupBox gbInput;
+		private System.Windows.Forms.TableLayoutPanel tlp2FA;
+		private System.Windows.Forms.Button btn2FA;
+		private System.Windows.Forms.Button btn2FAOk;
+		private System.Windows.Forms.Button btn2FANo;
+		private System.Windows.Forms.GroupBox gbChat;
+		private System.Windows.Forms.TableLayoutPanel tlpChat;
+		private System.Windows.Forms.Button btnRejoin;
+		private System.Windows.Forms.GroupBox gbGames;
+		private System.Windows.Forms.TableLayoutPanel tlpGames;
+		private System.Windows.Forms.Button btnOwns;
+		private System.Windows.Forms.GroupBox gbASF;
+		private System.Windows.Forms.TableLayoutPanel tlpASF;
+		private System.Windows.Forms.Button btnASFHelp;
+		private System.Windows.Forms.Button btnASFVersion;
+		private System.Windows.Forms.NotifyIcon TrayIcon;
+		private System.Windows.Forms.ContextMenuStrip cmsTrayIcon;
+		private System.Windows.Forms.ToolStripMenuItem tsmiClose;
+		private System.Windows.Forms.Button btnASFuiSettings;
+		private System.Windows.Forms.RichTextBox rtbOutput;
+		private System.Windows.Forms.ComboBox cbBotList;
+		private System.Windows.Forms.Button btnLootAll;
+		private System.Windows.Forms.Button btnPasswordBot;
+		private System.Windows.Forms.Button btnASFuiHelp;
+		private System.Windows.Forms.Button btnClear;
+		private System.Windows.Forms.TableLayoutPanel tlpMainContent;
+		private System.Windows.Forms.Button btnPlay;
+		private System.Windows.Forms.Button btnOwnAll;
+		public System.Windows.Forms.TextBox tbInput;
+		public System.Windows.Forms.Button btnStart;
+		public System.Windows.Forms.Button btnStop;
+		private System.Windows.Forms.ToolTip ttDesc;
+		private System.Windows.Forms.Button btnPauseBot;
+		private System.Windows.Forms.Button btnStatusAll;
+		private System.Windows.Forms.Button btnStatusBot;
+		private System.Windows.Forms.Button btnResumeBot;
+		private System.Windows.Forms.Button btnStartAll;
+		private System.Windows.Forms.TableLayoutPanel tlpKeys;
+		private System.Windows.Forms.Button btnRedeem;
+		private System.Windows.Forms.Button btnAddLicense;
+	}
 }
-
