@@ -27,10 +27,10 @@ namespace ASFui {
 
 		private void init() {
 			var ASFInfo = new ProcessStartInfo() {
-				Arguments = "--process-required",
+				Arguments = "/C chcp 65001 > null && \"" + Properties.Settings.Default.ASFBinary + "\" --process-required",
 				CreateNoWindow = true,
 				Domain = "",
-				FileName = Properties.Settings.Default.ASFBinary,
+				FileName = "cmd.exe",
 				LoadUserProfile = false,
 				Password = null,
 				RedirectStandardError = true,
@@ -51,7 +51,7 @@ namespace ASFui {
 
 			ASF.EnableRaisingEvents = true;
 
-			ASF.Exited += new EventHandler(ASFExit);
+			//ASF.Exited += new EventHandler(ASFExit);
 		}
 
 		private void ASFExit(object sender, System.EventArgs e) {

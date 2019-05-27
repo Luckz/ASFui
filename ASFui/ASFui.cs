@@ -246,6 +246,7 @@ namespace ASFui {
 		private void BtnStop_Click(object sender, EventArgs e) {
 			btnStop.Enabled = false;
 			rtbOutput.AppendText("Stopping ASF..." + Environment.NewLine);
+			sendCommand("exit");
 			if (Properties.Settings.Default.IsLocal) {
 				_asf.Stop();
 			}
