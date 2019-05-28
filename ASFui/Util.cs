@@ -59,10 +59,12 @@ namespace ASFui {
 
 			var hostname = "127.0.0.1";
 			var port = "1242";
-			//ancient legacy config:
-			if (null != json["IPCHostname"])
+			// ancient legacy config:
+			if (null != json["IPCHostname"]) // don't think this was ever an ASF feature
 				hostname = json["IPCHostname"].ToString();
-			if (null != json["IPCPort"])
+			if (null != json["IPCHost"]) // 2017 format
+				hostname = json["IPCHost"].ToString();
+			if (null != json["IPCPort"]) // 2017 format
 				port = json["IPCPort"].ToString();
 			if (null == json["IPCPassword"] || string.IsNullOrEmpty(json["IPCPassword"].ToString()))
 				return "http://" + hostname + ":" + port + "/Api/Command/";
@@ -73,12 +75,12 @@ namespace ASFui {
 		public static bool CheckIfAsfIsRunning() {
 			foreach (Process PPath in Process.GetProcessesByName("ArchiSteamFarm")) {
 				string fullpath = PPath.MainModule.FileName;
-				if (fullpath == Settings.Default.ASFBinary) //only match exact ASF
+				if (fullpath == Settings.Default.ASFBinary) // only match exact ASF
 					return true;
 			}
 			return false;
 
-			//old code matching any ASFs:
+			// old code matching any ASFs:
 			/*return Process.GetProcessesByName("ASF").Length > 0 ||
                    Process.GetProcessesByName("ArchiSteamFarm").Length > 0 ||
                    Process.GetProcessesByName(Path.GetFileNameWithoutExtension(Settings.Default.ASFBinary)).Length > 0;*/
